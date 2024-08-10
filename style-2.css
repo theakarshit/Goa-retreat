@@ -1,0 +1,675 @@
+body {
+  background-color: #FDF6F2;
+  margin: 0;
+  font-family: Tahoma, sans-serif;
+  font-weight: 400;
+}
+
+header {
+  width: 60%; /* Original width for desktop */
+  margin: 0 auto; /* Center align the header */
+  padding: 40px 0; /* Add padding above and below the header */
+  background-color: #FDF6F2; /* Ensure background color is consistent */
+  z-index: 1000; /* Ensure it stays on top of other content */
+  position: relative; /* Changed from sticky for better mobile support */
+}
+
+.header-content {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  justify-content: space-between; /* Distribute space between title and menu */
+  padding: 0 20px; /* Padding on the sides */
+}
+
+.retreat-title {
+  font-size: 20px;
+  font-family: Tahoma, sans-serif;
+  font-weight: 400;
+  color: #000; /* Adjust the color if needed */
+}
+
+.menu {
+  display: flex;
+  align-items: center; /* Vertically align menu items */
+  gap: 20px; /* Space between menu items */
+}
+
+.menu a {
+  font-size: 20px;
+  font-family: Tahoma, sans-serif;
+  font-weight: 400;
+  color: #000; /* Default text color */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.menu a:hover {
+  color: #666; /* Slightly lighter color on hover */
+}
+
+.menu a.button {
+  background-color: #FFE43A;
+  color: #000; /* Text color inside the button */
+  padding: 10px 30px; /* Increase padding inside the button for more spacing */
+  border-radius: 20px; /* Rounded corners */
+  text-transform: uppercase; /* Capitalize text */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center align text inside button */
+  font-size: 20px;
+  font-family: Tahoma, sans-serif;
+  font-weight: 400;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Drop shadow */
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.menu a.button:hover {
+  background-color: #000; /* Button color on hover */
+  color: #FFF; /* Text color on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Darker drop shadow on hover */
+  animation: jello 0.5s; /* Apply the jello animation */
+}
+
+/* Keyframes for the jello animation */
+@keyframes jello {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.1) skewX(-10deg); }
+  50% { transform: scale(1) skewX(5deg); }
+  75% { transform: scale(1.1) skewX(-5deg); }
+  100% { transform: scale(1); }
+}
+
+.section-main-1 {
+  padding-bottom: 100px; /* Massive padding for bottom of the section */
+}
+
+.main-heading {
+  text-align: center; /* Center align the heading */
+  margin: 0 20px 10px; /* Margin: top 0, right 20px, bottom 10px, left 20px */
+  padding: 0; /* Remove padding */
+}
+
+.main-heading h1 {
+  font-size: 42px;
+  font-family: Tahoma, sans-serif;
+  font-weight: 400;
+  margin: 0; /* Remove default margin */
+}
+
+.highlight {
+  font-weight: bold; /* Make the text bold */
+  background-color: #FFE43A; /* Background color for the highlighted text */
+  padding: 5px 10px; /* Add some padding inside the highlighted area */
+  border-radius: 5px; /* Curved corners */
+  display: inline; /* Ensure the background color wraps only the text */
+}
+
+.subheadline {
+  text-align: center; /* Center align the subheadline */
+  margin: 20px 20px 10px; /* Margin: top 20px, right 20px, bottom 10px, left 20px */
+  padding: 0; /* Remove padding */
+}
+
+.subheadline p {
+  font-size: 18px;
+  font-family: Tahoma, sans-serif;
+  font-weight: 400;
+  margin: 0; /* Remove default margin */
+}
+
+.subheadline strong {
+  font-weight: 400; /* Ensure bold text is consistent */
+}
+
+.subheadline u {
+  text-decoration: underline; /* Underline the text */
+}
+
+.video-container {
+  width: 60vw; /* Responsive width */
+  height: 33.1vw; /* Responsive height based on the aspect ratio 940px by 526.4px */
+  max-width: 940px; /* Max width */
+  max-height: 526.4px; /* Max height */
+  margin: 20px auto; /* Top and bottom margin 20px, center align horizontally */
+  padding: 20px; /* Padding inside the container */
+  background-color: #FFE43A; /* Background color for the container */
+  border-radius: 20px; /* Rounded corners */
+  display: flex;
+  justify-content: center; /* Center align content horizontally */
+  align-items: center; /* Center align content vertically */
+  position: relative; /* Ensure correct positioning of iframe */
+}
+
+.video-container iframe {
+  width: 99%; /* Video covers 99% of the container width */
+  height: 99%; /* Video covers 99% of the container height */
+  border: none; /* Remove border */
+  border-radius: 15px; /* Rounded corners for the video */
+}
+
+
+.apply-now-container {
+  text-align: center; /* Center align the container */
+  margin-top: 20px; /* Margin at the top */
+  position: relative; /* Ensure correct positioning for child elements */
+}
+
+.apply-now-button {
+  display: inline-block; /* Ensure the button fits content */
+  background-color: #FFE43A; /* Default button color */
+  color: #000; /* Default text color */
+  padding: 20px 100px; /* Padding inside the button */
+  border-radius: 20px; /* Rounded corners */
+  text-transform: uppercase; /* Capitalize text */
+  font-size: 24px; /* Font size */
+  font-family: Tahoma, sans-serif; /* Font family */
+  font-weight: 400; /* Font weight */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s; /* Smooth transitions */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Drop shadow */
+}
+
+.apply-now-button:hover {
+  background-color: #000; /* Button color on hover */
+  color: #FFF; /* Text color on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+  animation: jello 0.5s; /* Jello animation */
+}
+
+.capacity-note {
+  display: block; /* Ensure the text is displayed as a block element */
+  font-size: 17px; /* Font size */
+  font-style: italic; /* Italicize the text */
+  color: rgba(0, 0, 0, 0.45); /* Text color */
+  margin-top: 10px; /* Margin at the top */
+}
+
+.full-width-section {
+  width: 100%; /* Full width of the viewport */
+  height: 500px; /* Fixed height */
+  position: relative; /* Ensure positioning context for pseudo-elements */
+  z-index: 1; /* Ensure it is above other content */
+  overflow: hidden; /* Hide overflow of the pseudo-element */
+}
+
+.full-width-section {
+  width: 100%; /* Full width of the viewport */
+  height: 500px; /* Fixed height */
+  position: relative; /* Ensure positioning context for pseudo-elements */
+  z-index: 1; /* Ensure it is above other content */
+  overflow: hidden; /* Hide overflow of the pseudo-element */
+}
+
+.full-width-section::before {
+  content: ''; /* Empty content for the pseudo-element */
+  position: absolute; /* Absolute positioning within .full-width-section */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, 
+    #FDF6F2 50%, /* Top left color, matching the webpage background */
+    #000 50% /* Bottom right color, black */
+  );
+  z-index: -1; /* Place behind the content of .full-width-section */
+}
+
+.full-width-section img {
+    position: absolute; /* Absolute positioning within the section */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to center */
+    height: auto; /* Maintain original height */
+    width: auto; /* Maintain original width */
+    max-height: 100%; /* Limit the height to 100% of the section’s height */
+    max-width: 100%; /* Ensure it doesn't exceed the section's width */
+    transition: transform 0.3s; /* Smooth transition for scaling */
+}
+
+.full-width-section img:hover {
+    transform: translate(-50%, -50%) scale(1.07); /* Scale up by 7% */
+}
+
+
+
+.black-section {
+  width: 100%; /* Full width of the viewport */
+  background-color: #000; /* Black background color */
+  display: flex; /* Flexbox for centering content */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center content horizontally */
+  position: relative; /* Positioning context */
+  margin: 0; /* Remove any default margin */
+  padding: 20px; /* Add padding */
+  box-sizing: border-box;
+  padding-bottom: 100px;/* Ensure padding is included in the total width and height */
+}
+
+.headline,
+.image-container,
+.itinerary,
+.columns-container {
+  width: 100%; /* Ensure full width for these sections */
+  text-align: center; /* Center align text for headline and itinerary */
+}
+
+.headline,
+.itinerary {
+  padding: 40px 0; /* Top and bottom padding */
+}
+
+.headline h2,
+.itinerary h2 {
+  font-size: 28px; /* Font size */
+  color: #FFF; /* White color */
+  font-family: Tahoma, sans-serif; /* Font family */
+  font-weight: 400; /* Normal weight */
+  margin: 0; /* Remove default margin */
+}
+
+.image-container {
+  display: flex; /* Center the image horizontally */
+  justify-content: center; /* Center horizontally */
+  margin-top: 40px; /* Add top margin to space out from the headline */
+}
+
+.image-container img {
+  width: 65%; /* Width of the image container */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+.image-container img:hover {
+  transform: scale(1.05); /* Scale up the image on hover */
+}
+
+.columns-container {
+  width: 80%; /* Container width */
+  display: flex; /* Flexbox for column layout */
+  margin-top: 20px; /* Add top margin */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+.left-column {
+  width: 60%; /* Left column width */
+  padding: 10px; /* Left and right padding */
+  box-sizing: border-box; /* Include padding in the width */
+  text-align: left; /* Left align the text */
+}
+
+.right-column {
+  width: 40%; /* Right column width */
+  display: flex; /* Flexbox for centering content */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+}
+
+.right-column img {
+  max-width: 100%; /* Make sure the image doesn't overflow */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+.right-column img:hover {
+  transform: scale(1.05); /* Scale up the image on hover */
+}
+
+.left-column .day {
+  font-size: 42px; /* Font size */
+  font-weight: 700; /* Bold text */
+  color: #FFF; /* White color */
+  margin-top: 20px; /* Top margin */
+}
+
+.left-column .event {
+  font-size: 24px; /* Font size */
+  font-weight: 400; /* Normal weight */
+  background-color: #FFE43A; /* Background color */
+  color: #000; /* Black color */
+  border-radius: 10px; /* Rounded corners */
+  margin: 10px 0; /* Top and bottom margin */
+  padding: 10px; /* Left and right padding */
+  display: inline-block; /* Ensure background only covers text */
+}
+
+.left-column .details {
+  font-size: 18px; /* Font size */
+  font-weight: 400; /* Normal weight */
+  color: #FFF; /* White color */
+  font-family: Tahoma, sans-serif; /* Font family */
+  padding-top: 20px; /* Top padding */
+  margin-bottom: 10px; /* Bottom margin */
+}
+
+.second-columns-container {
+  width: 80%; /* Container width */
+  display: flex; /* Flexbox for column layout */
+  margin-top: 40px; /* Top margin for spacing from the previous section */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+.second-columns-container .left-column {
+  width: 40%; /* Width of the left column */
+  display: flex; /* Flexbox for centering content */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  padding: 10px; /* Padding */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+.second-columns-container .left-column img {
+  max-width: 100%; /* Ensure image fits within the column */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.second-columns-container .right-column {
+  width: 60%; /* Width of the right column */
+  padding: 10px; /* Padding */
+  box-sizing: border-box; /* Include padding in the width */
+  text-align: right; /* Align text to the right */
+  display: flex; /* Flexbox for vertical stacking */
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-end; /* Align items to the end */
+}
+
+.second-columns-container .right-column .day {
+  font-size: 42px; /* Font size */
+  font-weight: 700; /* Bold text */
+  color: #FFF; /* White color */
+  margin-top: 20px; /* Top margin */
+}
+
+.second-columns-container .right-column .event {
+  font-size: 24px; /* Font size */
+  font-weight: 400; /* Normal weight */
+  background-color: #FFE43A; /* Background color */
+  color: #000; /* Black color */
+  border-radius: 10px; /* Rounded corners */
+  margin: 10px 0; /* Top and bottom margin */
+  padding: 10px; /* Padding */
+  display: inline-block; /* Ensure background color covers only the text */
+}
+
+.second-columns-container .right-column .details {
+  font-size: 18px; /* Font size */
+  font-weight: 400; /* Normal weight */
+  color: #FFF; /* White color */
+  font-family: Tahoma, sans-serif; /* Font family */
+  padding-top: 20px; /* Top padding */
+  margin-bottom: 10px; /* Bottom margin */
+  text-align: left; /* Align text to the left */
+}
+
+.third-columns-container {
+  width: 80%; /* Container width */
+  display: flex; /* Flexbox for column layout */
+  margin-top: 40px; /* Add top margin */
+  padding: 0; /* Remove padding */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+.third-columns-container .left-column {
+  width: 60%; /* Width of the left column */
+  padding-right: 20px; /* Space between columns */
+  text-align: left; /* Left align text */
+}
+
+.third-columns-container .right-column {
+  width: 40%; /* Width of the right column */
+  display: flex; /* Flexbox for centering content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.third-columns-container .right-column img {
+  max-width: 100%; /* Ensure the image scales correctly */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.third-columns-container .left-column .day,
+.third-columns-container .left-column .event,
+.third-columns-container .left-column .details {
+  font-family: Tahoma, sans-serif; /* Font family */
+}
+
+.third-columns-container .left-column .day {
+  font-size: 42px; /* Font size */
+  font-weight: 700; /* Bold text */
+  color: #FFF; /* White color */
+  margin-top: 20px; /* Top margin */
+}
+
+.third-columns-container .left-column .event {
+  font-size: 24px; /* Font size */
+  font-weight: 400; /* Normal weight */
+  background-color: #FFE43A; /* Background color */
+  color: #000; /* Black color */
+  border-radius: 10px; /* Rounded corners */
+  margin: 10px 0; /* Top and bottom margin */
+  padding: 10px; /* Padding */
+  display: inline-block; /* Allow padding and background to fit text */
+}
+
+.third-columns-container .left-column .details {
+  font-size: 18px; /* Font size */
+  font-weight: 400; /* Normal weight */
+  color: #FFF; /* White color */
+  padding-top: 20px; /* Top padding */
+  margin-bottom: 10px; /* Bottom margin */
+}
+
+.fourth-columns-container {
+  width: 80%; /* Container width */
+  display: flex; /* Flexbox for column layout */
+  margin-top: 20px; /* Add top margin */
+  padding: 0; /* Remove padding */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+.fourth-columns-container .left-column {
+  width: 40%; /* Width of the left column */
+  display: flex; /* Flexbox for centering content */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  padding: 10px; /* Padding inside the column */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+.fourth-columns-container .left-column img {
+  max-width: 100%; /* Ensure image doesn't overflow */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.fourth-columns-container .right-column {
+  width: 60%; /* Width of the right column */
+  padding: 10px; /* Padding */
+  box-sizing: border-box; /* Include padding in the width */
+  text-align: right; /* Align text to the right */
+  display: flex; /* Flexbox for vertical stacking */
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-end; /* Align items to the end */
+}
+
+
+.fourth-columns-container .right-column .day {
+  font-size: 42px; /* Font size */
+  font-weight: 700; /* Bold text */
+  color: #FFF; /* White color */
+  margin-top: 20px; /* Top margin */
+}
+
+.fourth-columns-container .right-column .event {
+  font-size: 24px; /* Font size */
+  font-weight: 400; /* Normal weight */
+  background-color: #FFE43A; /* Background color */
+  color: #000; /* Black color */
+  border-radius: 10px; /* Rounded corners */
+  margin: 10px 0; /* Top and bottom margin */
+  padding: 10px; /* Padding */
+  display: inline-block; /* Ensure background color covers only the text */
+}
+
+.fourth-columns-container .right-column .details {
+  font-size: 18px; /* Font size */
+  font-weight: 400; /* Normal weight */
+  color: #FFF; /* White color */
+  font-family: Tahoma, sans-serif; /* Font family */
+  padding-top: 20px; /* Top padding */
+  margin-bottom: 10px; /* Bottom margin */
+  text-align: left; /* Align text to the left */
+}
+
+
+.fifth-columns-container {
+  width: 80%; /* Container width */
+  display: flex; /* Flexbox for column layout */
+  margin-top: 40px; /* Add top margin */
+  padding: 0; /* Remove padding */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+.fifth-columns-container .left-column {
+  width: 60%; /* Width of the left column */
+  padding-right: 20px; /* Space between columns */
+  text-align: left; /* Left align text */
+}
+
+.fifth-columns-container .right-column {
+  width: 40%; /* Width of the right column */
+  display: flex; /* Flexbox for centering content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.fifth-columns-container .right-column img {
+  max-width: 100%; /* Ensure the image scales correctly */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.fifth-columns-container .left-column .day,
+.fifth-columns-container .left-column .event,
+.fifth-columns-container .left-column .details {
+  font-family: Tahoma, sans-serif; /* Font family */
+}
+
+.fifth-columns-container .left-column .day {
+  font-size: 42px; /* Font size */
+  font-weight: 700; /* Bold text */
+  color: #FFF; /* White color */
+  margin-top: 20px; /* Top margin */
+}
+
+.fifth-columns-container .left-column .event {
+  font-size: 24px; /* Font size */
+  font-weight: 400; /* Normal weight */
+  background-color: #FFE43A; /* Background color */
+  color: #000; /* Black color */
+  border-radius: 10px; /* Rounded corners */
+  margin: 10px 0; /* Top and bottom margin */
+  padding: 10px; /* Padding */
+  display: inline-block; /* Allow padding and background to fit text */
+}
+
+.fifth-columns-container .left-column .details {
+  font-size: 18px; /* Font size */
+  font-weight: 400; /* Normal weight */
+  color: #FFF; /* White color */
+  padding-top: 20px; /* Top padding */
+  margin-bottom: 10px; /* Bottom margin */
+}
+
+
+.stay-details {
+  width: 100%; /* Full width of the viewport */
+  background: transparent; /* Transparent background */
+  padding: 20px 0; /* Top and bottom padding */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+.stay-details-heading {
+  font-size: 38px; /* Font size for the heading */
+  font-weight: 400; /* Font weight */
+  text-align: center; /* Center align the heading text */
+  margin: 20px 0; /* Top and bottom margin */
+}
+
+.columns-container-luxury-stay {
+  width: 100%; /* Full width of the viewport */
+  display: flex; /* Flexbox for column layout */
+  justify-content: space-between; /* Space out columns */
+  padding-bottom: 60px; /* Bottom padding */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+.columns-container-luxury-stay .left-column,
+.columns-container-luxury-stay .right-column {
+  width: 20%; /* Width for left and right columns */
+}
+
+.columns-container-luxury-stay .middle-column {
+  width: 60%; /* Width for middle column */
+  display: flex; /* Flexbox for centering content */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+}
+
+.columns-container-luxury-stay .middle-column img {
+  max-width: 80%; /* Ensure the image doesn't overflow */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.fade-in-image {
+    opacity: 0.2; /* Initial opacity */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
+}
+
+
+.first-column,
+.third-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+.first-column img,
+.third-column img {
+    width: 40%; /* Adjust width as necessary */
+    margin-bottom: 20px; /* Adjust spacing between images */
+}
+
+.first-column img:last-child,
+.third-column img:last-child {
+    margin-bottom: 0; /* Removes margin from the last image */
+}
+
+
+.sticky-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  margin-left: 30px; /* Adjust as needed */
+  margin-right: 30px; /* Adjust as needed */
+}
+
+.sticky-button a {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 400;
+  background-color: #FFE43A;
+  color: black;
+  padding: 10px 20px; /* Adjust padding as needed */
+  text-decoration: none; /* Removes the underline */
+  font-family: Tahoma, sans-serif;
+  border-radius: 5px; /* Optional: adds rounded corners */
+  transition: background-color 0.3s ease; /* Optional: adds smooth background color transition */
+}
+
+.sticky-button a:hover {
+  background-color: #e0d747; /* Optional: darker shade on hover */
+}
+
+e
+
+
